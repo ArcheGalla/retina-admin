@@ -20,6 +20,7 @@
                         <th>work</th>
                         <th>amount</th>
                         <th>paid</th>
+                        <th> Date of registration</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -34,7 +35,7 @@
                         <td>{{ client.work}}</td>
                         <td>{{ client.amount}}</td>
                         <td>{{ client.paid}}</td>
-                        <td>@mdo</td>
+                        <td>{{ client.createdAt ? (client.createdAt.$$date | date:'medium') : 'Not available' }}</td>
                     </tr>
                     </tbody>
                 </table>
